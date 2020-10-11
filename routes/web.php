@@ -24,3 +24,9 @@ Route::get('/users', 'App\Http\Controllers\Auth\RegisterController@showAllUsers'
 Route::get('/dashboard', 'App\Http\Controllers\Auth\RegisterController@showDashboard');
 Route::resource('role', 'App\Http\Controllers\RoleController');
 Route::resource('user', 'App\Http\Controllers\UserController');
+
+
+Route::get('admin', 'App\Http\Controllers\AdminAuthController@LoginPage');
+Route::post('admin', 'App\Http\Controllers\AdminAuthController@login') -> name('admin.login');
+Route::get('admin-register', 'App\Http\Controllers\AdminAuthController@RegisterPage');
+Route::post('admin-register', 'App\Http\Controllers\AdminAuthController@RegisterAdmin');
