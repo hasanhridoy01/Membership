@@ -46,6 +46,22 @@ return [
             'provider' => 'admins',
         ],
 
+        'student' => [
+            'driver' => 'session',
+            'provider' => 'students',
+        ],
+
+        'teacher' => [
+            'driver' => 'session',
+            'provider' => 'teachers',
+        ],
+
+
+        'staff' => [
+            'driver' => 'session',
+            'provider' => 'staff',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -55,6 +71,24 @@ return [
         'admin-api' => [
             'driver' => 'token',
             'provider' => 'admins',
+            'hash' => false,
+        ],
+
+        'student-api' => [
+            'driver' => 'token',
+            'provider' => 'students',
+            'hash' => false,
+        ],
+
+        'teacher-api' => [
+            'driver' => 'token',
+            'provider' => 'teachers',
+            'hash' => false,
+        ],
+
+        'staff-api' => [
+            'driver' => 'token',
+            'provider' => 'staff',
             'hash' => false,
         ],
     ],
@@ -85,6 +119,21 @@ return [
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
+        ],
+
+        'students' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\student::class,
+        ],
+
+        'teachers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Teacher::class,
+        ],
+
+        'staff' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Staff::class,
         ],
 
         // 'users' => [
